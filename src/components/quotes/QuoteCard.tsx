@@ -73,12 +73,33 @@ export const QuoteCard: React.FC<QuoteCardProps> = ({ quote, onDelete, onUpdate 
 
   return (
     <>
-      <Card className="group relative w-full overflow-hidden bg-gradient-to-br from-card via-card to-muted/30 border-0 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-primary/10 to-transparent rounded-full -translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700" />
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-primary/5 to-transparent rounded-full translate-x-12 translate-y-12 group-hover:scale-150 transition-transform duration-700" />
-        <div className="absolute top-4 left-4 opacity-5 group-hover:opacity-10 transition-opacity duration-500">
-          <QuoteIcon className="w-24 h-24 text-primary" />
+      <div className="group relative w-full p-[1.5px] rounded-2xl bg-gradient-to-br from-primary/40 via-primary/10 to-primary/40 hover:from-primary/70 hover:via-primary/20 hover:to-primary/70 transition-all duration-500 shadow-lg hover:shadow-[0_25px_60px_-15px_hsl(var(--primary)/0.4)] hover:-translate-y-1">
+        <Card className="relative w-full overflow-hidden rounded-2xl border-0 bg-gradient-to-br from-card via-card to-muted/40">
+        {/* Decorative ambient blobs */}
+        <div className="pointer-events-none absolute -top-20 -left-20 w-56 h-56 bg-gradient-to-br from-primary/25 via-primary/10 to-transparent rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700" />
+        <div className="pointer-events-none absolute -bottom-20 -right-20 w-56 h-56 bg-gradient-to-tl from-primary/20 via-primary/5 to-transparent rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700" />
+
+        {/* Subtle dotted texture */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.04] mix-blend-overlay"
+          style={{
+            backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)',
+            backgroundSize: '14px 14px',
+          }}
+        />
+
+        {/* Big decorative quote mark */}
+        <div className="pointer-events-none absolute -top-6 left-4 opacity-[0.07] group-hover:opacity-[0.14] transition-opacity duration-500 select-none">
+          <span
+            className="text-[180px] leading-none font-serif text-primary"
+            style={{ fontFamily: "'Amiri', 'Noto Naskh Arabic', serif" }}
+          >
+            ”
+          </span>
         </div>
+
+        {/* Top shimmer line */}
+        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-primary/60 to-transparent" />
 
         <CardContent className="relative p-6 md:p-8">
           <div className="flex items-start justify-between mb-6">
