@@ -220,7 +220,8 @@ export const QuoteCard: React.FC<QuoteCardProps> = ({ quote, onDelete, onUpdate 
             </div>
           </div>
         </CardContent>
-      </Card>
+        </Card>
+      </div>
 
       <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
         <DialogContent className="sm:max-w-[425px]">
