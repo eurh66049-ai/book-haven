@@ -5,7 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import BookImageLoader from './BookImageLoader';
 import { getCategoryInArabic } from '@/utils/categoryTranslation';
 import { createBookSlug } from '@/utils/bookSlug';
-import { OptimizedStarRating } from './OptimizedStarRating';
+import { StarRating } from '@/components/ui/star-rating';
 import { DisplayOnlyIcon } from '@/components/icons/DisplayOnlyIcon';
 
 interface SimpleBookCardProps {
