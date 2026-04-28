@@ -46,7 +46,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
             )}
           />
           <span
-            className="absolute inset-y-0 right-0 overflow-hidden pointer-events-none"
+            className="absolute inset-y-0 left-0 overflow-hidden pointer-events-none"
             style={{ width: `${fillPercent}%` }}
           >
             <Star
@@ -63,7 +63,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      <div className="flex items-center flex-row-reverse" dir="ltr">
+      <div className="flex items-center" dir="ltr">
         {renderStars()}
       </div>
       
