@@ -42,17 +42,21 @@ export const StarRating: React.FC<StarRatingProps> = ({
           <Star
             className={cn(
               sizeClasses[size],
-              "text-gray-300"
+              "text-gray-300 fill-gray-300"
             )}
           />
           <span
-            className="absolute inset-y-0 left-0 overflow-hidden pointer-events-none"
-            style={{ width: `${fillPercent}%` }}
+            className="absolute inset-0 overflow-hidden pointer-events-none"
+            style={{
+              width: `${fillPercent}%`,
+              right: 0,
+              left: 'auto',
+            }}
           >
             <Star
               className={cn(
                 sizeClasses[size],
-                "fill-red-500 text-red-500"
+                "fill-red-500 text-red-500 absolute top-0 right-0"
               )}
             />
           </span>
