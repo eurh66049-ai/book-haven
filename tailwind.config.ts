@@ -53,8 +53,10 @@ export default {
 				'ultra-hd': { 'raw': '(min-resolution: 300dpi)' },
 			},
 			fontFamily: {
-				sans: ['Tajawal', 'sans-serif'],
-				tajawal: ['Tajawal', 'sans-serif'],
+				sans: ['Thmanyah Sans', 'Cairo', 'sans-serif'],
+				tajawal: ['Thmanyah Sans', 'Cairo', 'sans-serif'],
+				thmanyah: ['Thmanyah Sans', 'sans-serif'],
+				cairo: ['Thmanyah Sans', 'Cairo', 'sans-serif'],
 			},
 			fontWeight: {
 				normal: '400',
