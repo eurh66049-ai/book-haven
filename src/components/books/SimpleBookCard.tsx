@@ -106,7 +106,7 @@ export const SimpleBookCard = memo(({
           
           {(finalRating > 0 || totalReviews > 0) && (
             <div className="flex justify-center">
-              <OptimizedStarRating
+              <StarRating
                 rating={finalRating}
                 totalReviews={totalReviews}
                 size="sm"
