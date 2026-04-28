@@ -5,7 +5,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import BookImageLoader from './BookImageLoader';
 import { getCategoryInArabic } from '@/utils/categoryTranslation';
 import { createBookSlug } from '@/utils/bookSlug';
-import { OptimizedStarRating } from './OptimizedStarRating';
+import { StarRating } from '@/components/ui/star-rating';
 import { DisplayOnlyIcon } from '@/components/icons/DisplayOnlyIcon';
 
 interface SimpleBookCardProps {
@@ -106,7 +106,7 @@ export const SimpleBookCard = memo(({
           
           {(finalRating > 0 || totalReviews > 0) && (
             <div className="flex justify-center">
-              <OptimizedStarRating
+              <StarRating
                 rating={finalRating}
                 totalReviews={totalReviews}
                 size="sm"
