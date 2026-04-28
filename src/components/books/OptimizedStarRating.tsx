@@ -30,18 +30,18 @@ export const OptimizedStarRating: React.FC<OptimizedStarRatingProps> = ({
 
   return (
     <div className="flex items-center gap-1">
-      <div className="flex items-center" dir="ltr">
+      <div className="flex flex-row-reverse items-center" dir="ltr">
         {Array.from({ length: 5 }, (_, index) => {
           const fillPercent = Math.max(0, Math.min(100, (displayRating - index) * 100));
 
           return (
             <span key={index} className="relative inline-block shrink-0" dir="ltr">
-              <Star className={`${sizeClasses[size]} text-gray-300`} />
+              <Star className={`${sizeClasses[size]} text-gray-300 fill-gray-300`} />
               <span
-                className="absolute inset-y-0 left-0 overflow-hidden pointer-events-none"
-                style={{ width: `${fillPercent}%` }}
+                className="absolute inset-0 overflow-hidden pointer-events-none"
+                style={{ width: `${fillPercent}%`, right: 0, left: 'auto' }}
               >
-                <Star className={`${sizeClasses[size]} fill-yellow-400 text-yellow-400`} />
+                <Star className={`${sizeClasses[size]} fill-yellow-400 text-yellow-400 absolute top-0 right-0`} />
               </span>
             </span>
           );
