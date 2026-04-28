@@ -63,7 +63,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
 
   return (
     <div className={cn("flex items-center gap-1", className)}>
-      <div className="flex items-center flex-row-reverse" dir="ltr">
+      <div className="flex items-center" dir="ltr">
         {renderStars()}
       </div>
       
