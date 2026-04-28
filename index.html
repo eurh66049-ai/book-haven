@@ -22,9 +22,9 @@
     <link rel="dns-prefetch" href="https://cdn.onesignal.com" />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 
-    <!-- Font: Cairo - non-blocking with font-display swap -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" /></noscript>
+    <!-- Font: Thmanyah Sans - loaded locally via @font-face in CSS -->
+    <link rel="preload" href="/fonts/thmanyahsans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/thmanyahsans-Bold.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Favicon - single entry -->
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -187,7 +187,7 @@
       @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
       /* Font fallback to eliminate FOIT */
-      body { font-family: Cairo, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+      body { font-family: 'Thmanyah Sans', Cairo, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
     </style>
     
   
